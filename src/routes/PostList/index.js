@@ -9,16 +9,16 @@ export default (store) => ({
     require.ensure([], (require) => {
       /*  Webpack - use require callback to define
           dependencies for bundling   */
-      const Posts = require('./containers/Posts').default
-      const reducer = require('./modules/posts').default
+      const PostList = require('./containers/PostList').default
+      const reducer = require('./modules/postList').default
 
-      /*  Add the reducer to the store on key 'posts'  */
-      injectReducer(store, { key: 'posts', reducer })
+      /*  Add the reducer to the store on key 'postList'  */
+      injectReducer(store, { key: 'postList', reducer })
 
       /*  Return getComponent   */
-      cb(null, Posts)
+      cb(null, PostList)
 
     /* Webpack named bundle   */
-    }, 'posts')
+    }, 'postList')
   }
 })

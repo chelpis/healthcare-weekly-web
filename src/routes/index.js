@@ -1,7 +1,7 @@
 // We only need to import the modules necessary for initial render
 import CoreLayout from '../layouts/PageLayout/CoreLayout'
 import PageLayout from '../layouts/PageLayout/PageLayout'
-import Posts from './Posts'
+import PostList from './PostList'
 import PostDetail from './PostDetail'
 
 
@@ -15,7 +15,7 @@ export const createRoutes = (store) => ({
     {
       component: PageLayout,
       childRoutes: [
-        Posts(store),
+        PostList(store),
         PostDetail(store),
       ]
     }

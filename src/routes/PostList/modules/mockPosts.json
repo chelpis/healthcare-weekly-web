@@ -1,0 +1,325 @@
+{
+  "links": {
+    "self": "https://mundi.chelpis.com/posts?page[number]=0\u0026page[size]=10",
+    "next": "https://mundi.chelpis.com/posts?page[number]=0\u0026page[size]=10",
+    "last": "https://mundi.chelpis.com/posts?page[number]=0\u0026page[size]=10"
+  },
+  "data": [
+    {
+      "title": "【行前通知】",
+      "description": "\u0026nbsp;2018癌症照護：翻轉護理接軌國際 研討會將在3/10(六)與您相見。時間：3/10(六)9：00報到9：30開始地點：中國醫藥大學立夫教學大樓\n(台中市北區學士路91號，校本部臨近英才路)請務必攜帶手機或行動裝置，以便使用APP-Mundi Nursing+ 報到與…",
+      "link": "https://admin.mundi.chelpis.com/archives/293",
+      "published": "Fri, 09 Mar 2018 02:50:32 +0000",
+      "publishedParsed": "2018-03-09T02:50:32Z",
+      "author": {
+        "name": "梧桐學院"
+      },
+      "guid": "wordpress293",
+      "categories": [
+        "article"
+      ],
+      "extensions": {
+        "chelpis-cms": {
+          "avatar": [
+            {
+              "name": "avatar",
+              "value": "https://ddme6kdet2xyc.cloudfront.net/wp-content/uploads/2018/02/14143306/Official-avatar-11-100x100.png",
+              "attrs": {},
+              "children": {}
+            }
+          ]
+        }
+      },
+      "tags": [],
+      "isLike": false,
+      "isCollected": false
+    },
+    {
+      "title": "問卷通知的使用方式",
+      "description": "為了讓用戶們得到更好的服務，我們會需要提出問卷收集各位的回饋，這時候就會用通知的方式提醒各位用戶們回答問卷。回答問卷的方法如下\n開啟「Mundi Nursing+」在APP中點選下方的用戶圖示會進入「我的」頁面點選鈴鐺圖示的「通知」項目之後，將會進入「通知」清單\n每個清單項目皆可…",
+      "link": "https://admin.mundi.chelpis.com/archives/282",
+      "published": "Thu, 08 Mar 2018 08:24:58 +0000",
+      "publishedParsed": "2018-03-08T08:24:58Z",
+      "author": {
+        "name": "Chelpis"
+      },
+      "guid": "wordpress282",
+      "categories": [
+        "article"
+      ],
+      "extensions": {
+        "chelpis-cms": {
+          "avatar": [
+            {
+              "name": "avatar",
+              "value": "https://ddme6kdet2xyc.cloudfront.net/wp-content/uploads/2018/02/14143306/Official-avatar-11-100x100.png",
+              "attrs": {},
+              "children": {}
+            }
+          ],
+          "image": [
+            {
+              "name": "image",
+              "value": "https://ddme6kdet2xyc.cloudfront.net/wp-content/uploads/2018/03/08161844/2018-03-08_08-18-43_487013.png",
+              "attrs": {},
+              "children": {}
+            }
+          ]
+        }
+      },
+      "tags": [],
+      "isLike": false,
+      "isCollected": false
+    },
+    {
+      "title": "【2018癌症照護：翻轉護理接軌國際】研討會送貼心好禮【必達淨豪華私密潔浴組】",
+      "description": "活動辦法於2018/3/10當天全程參加【2018癌症照護：翻轉護理接軌國際】研討會後，並完成簽退，即可獲得女神張鈞甯有感推薦的【必達淨豪華私密潔浴組乙份】(內含私密潔浴幕斯100ml二瓶+私密潔浴凝露50ml二瓶)簽退方式於研討會現場開啟APP(Mundi Nursing+)進…",
+      "link": "https://admin.mundi.chelpis.com/archives/239",
+      "published": "Tue, 27 Feb 2018 10:10:31 +0000",
+      "publishedParsed": "2018-02-27T10:10:31Z",
+      "author": {
+        "name": "中華民國乳癌教育暨防治學會"
+      },
+      "guid": "wordpress239",
+      "categories": [
+        "article"
+      ],
+      "extensions": {
+        "chelpis-cms": {
+          "avatar": [
+            {
+              "name": "avatar",
+              "value": "https://ddme6kdet2xyc.cloudfront.net/wp-content/uploads/2018/02/14143306/Official-avatar-11-100x100.png",
+              "attrs": {},
+              "children": {}
+            }
+          ],
+          "video": [
+            {
+              "name": "video",
+              "value": "",
+              "attrs": {},
+              "children": {
+                "youtube": [
+                  {
+                    "name": "youtube",
+                    "value": "https://www.youtube.com/watch?v=IXjxloyy9sI",
+                    "attrs": {},
+                    "children": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "tags": [],
+      "isLike": false,
+      "isCollected": true
+    },
+    {
+      "title": "APP報名研討會 ‧ 就送張鈞甯代言必達淨！",
+      "description": "活動辦法即日起，透過APP(Mundi Nursing+)成功報名【2018癌症照護：翻轉護理接軌國際】研討會，並於現場用QR code完成報到，即可獲得女神張鈞甯有感推薦的【必達淨私密潔浴凝露50ml乙份】報到方式(1) 於研討會現場開啟APP(Mundi Nursing+)(…",
+      "link": "https://admin.mundi.chelpis.com/archives/217",
+      "published": "Wed, 21 Feb 2018 15:41:24 +0000",
+      "publishedParsed": "2018-02-21T15:41:24Z",
+      "author": {
+        "name": "中華民國乳癌教育暨防治學會"
+      },
+      "guid": "wordpress217",
+      "categories": [
+        "article"
+      ],
+      "extensions": {
+        "chelpis-cms": {
+          "avatar": [
+            {
+              "name": "avatar",
+              "value": "https://ddme6kdet2xyc.cloudfront.net/wp-content/uploads/2018/02/14143306/Official-avatar-11-100x100.png",
+              "attrs": {},
+              "children": {}
+            }
+          ],
+          "video": [
+            {
+              "name": "video",
+              "value": "",
+              "attrs": {},
+              "children": {
+                "youtube": [
+                  {
+                    "name": "youtube",
+                    "value": "https://www.youtube.com/watch?v=IXjxloyy9sI",
+                    "attrs": {},
+                    "children": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "tags": [],
+      "isLike": false,
+      "isCollected": false
+    },
+    {
+      "title": "翻轉護理接軌國際-理事長的話以及國外講者介紹",
+      "description": "  ",
+      "link": "https://admin.mundi.chelpis.com/2018/02/11/2018-%e7%99%8c%e7%97%87%e7%85%a7%e8%ad%b7-%e7%bf%bb%e8%bd%89%e8%ad%b7%e7%90%86%e6%8e%a5%e8%bb%8c%e5%9c%8b%e9%9a%9b-%e8%ac%9b%e5%b8%ab%e7%be%a4%e4%bb%8b%e7%b4%b9/",
+      "published": "Sun, 11 Feb 2018 04:53:56 +0000",
+      "publishedParsed": "2018-02-11T04:53:56Z",
+      "author": {
+        "name": "中華民國乳癌教育暨防治學會"
+      },
+      "guid": "wordpress129",
+      "categories": [
+        "article"
+      ],
+      "extensions": {
+        "chelpis-cms": {
+          "avatar": [
+            {
+              "name": "avatar",
+              "value": "https://ddme6kdet2xyc.cloudfront.net/wp-content/uploads/2018/02/14143306/Official-avatar-11-100x100.png",
+              "attrs": {},
+              "children": {}
+            }
+          ],
+          "image": [
+            {
+              "name": "image",
+              "value": "https://ddme6kdet2xyc.cloudfront.net/wp-content/uploads/2018/02/14142914/0213-2.jpg",
+              "attrs": {},
+              "children": {}
+            }
+          ]
+        }
+      },
+      "tags": [],
+      "isLike": false,
+      "isCollected": false
+    },
+    {
+      "title": "2018 癌症照護: 翻轉護理接軌國際",
+      "description": "主辦單位：中華民國乳癌教育暨防治學會協辦單位：中國醫藥大學附設醫院外科部中國醫藥大學附設醫院乳房醫學中心台灣萌蒂藥品有限公司地點 : 中國醫藥大學立夫大樓B1國際會議廳學分申請：台灣乳房醫學會台灣外科醫學會台灣專科護理師學會(護理人員繼續教育積分,專科護理師繼續教育積分)台灣癌症…",
+      "link": "https://admin.mundi.chelpis.com/archives/100",
+      "published": "Thu, 08 Feb 2018 01:36:04 +0000",
+      "publishedParsed": "2018-02-08T01:36:04Z",
+      "author": {
+        "name": "中華民國乳癌教育暨防治學會"
+      },
+      "guid": "wordpress100",
+      "categories": [
+        "event"
+      ],
+      "extensions": {
+        "chelpis-cms": {
+          "avatar": [
+            {
+              "name": "avatar",
+              "value": "https://ddme6kdet2xyc.cloudfront.net/wp-content/uploads/2018/02/14143306/Official-avatar-11-100x100.png",
+              "attrs": {},
+              "children": {}
+            }
+          ],
+          "checkPoints": [
+            {
+              "name": "checkPoints",
+              "value": "",
+              "attrs": {},
+              "children": {
+                "checkPoint": [
+                  {
+                    "name": "checkPoint",
+                    "value": "報到",
+                    "attrs": {},
+                    "children": {}
+                  },
+                  {
+                    "name": "checkPoint",
+                    "value": "APP報到禮",
+                    "attrs": {},
+                    "children": {}
+                  },
+                  {
+                    "name": "checkPoint",
+                    "value": "全程參加禮",
+                    "attrs": {},
+                    "children": {}
+                  },
+                  {
+                    "name": "checkPoint",
+                    "value": "簽退",
+                    "attrs": {},
+                    "children": {}
+                  }
+                ]
+              }
+            }
+          ],
+          "date": [
+            {
+              "name": "date",
+              "value": "1520672400",
+              "attrs": {},
+              "children": {}
+            }
+          ],
+          "endDate": [
+            {
+              "name": "endDate",
+              "value": "1520704800",
+              "attrs": {},
+              "children": {}
+            }
+          ],
+          "image": [
+            {
+              "name": "image",
+              "value": "https://ddme6kdet2xyc.cloudfront.net/wp-content/uploads/2018/02/02150359/2018-03-02_07-03-59_244463.jpg",
+              "attrs": {},
+              "children": {}
+            }
+          ],
+          "location": [
+            {
+              "name": "location",
+              "value": "",
+              "attrs": {},
+              "children": {
+                "address": [
+                  {
+                    "name": "address",
+                    "value": "台灣台中市北區中國醫藥大學",
+                    "attrs": {},
+                    "children": {}
+                  }
+                ],
+                "lat": [
+                  {
+                    "name": "lat",
+                    "value": "24.1565204",
+                    "attrs": {},
+                    "children": {}
+                  }
+                ],
+                "lng": [
+                  {
+                    "name": "lng",
+                    "value": "120.68145630000003",
+                    "attrs": {},
+                    "children": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "tags": [],
+      "isLike": false,
+      "isCollected": true
+    }
+  ]
+}
