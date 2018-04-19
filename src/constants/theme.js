@@ -8,7 +8,7 @@ const theme = createMuiTheme({
     }
   },
   myVariable: {
-    globalBackground: 'whitesmoke',
+    globalBackground: 'white',
     sideNavWidth: 250
   }
 })

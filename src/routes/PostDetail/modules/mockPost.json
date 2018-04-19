@@ -1,0 +1,137 @@
+{
+  "_links": {
+    "about": [
+      {
+        "href": "https://admin.mundi.chelpis.com/wp-json/wp/v2/types/post"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://admin.mundi.chelpis.com/wp-json/wp/v2/users/3"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://admin.mundi.chelpis.com/wp-json/wp/v2/posts"
+      }
+    ],
+    "curies": [
+      {
+        "href": "https://api.w.org/{rel}",
+        "name": "wp",
+        "templated": true
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://admin.mundi.chelpis.com/wp-json/wp/v2/comments?post=100"
+      }
+    ],
+    "self": [
+      {
+        "href": "https://admin.mundi.chelpis.com/wp-json/wp/v2/posts/100"
+      }
+    ],
+    "version-history": [
+      {
+        "href": "https://admin.mundi.chelpis.com/wp-json/wp/v2/posts/100/revisions"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://admin.mundi.chelpis.com/wp-json/wp/v2/media?parent=100"
+      }
+    ],
+    "wp:term": [
+      {
+        "embeddable": true,
+        "href": "https://admin.mundi.chelpis.com/wp-json/wp/v2/categories?post=100",
+        "taxonomy": "category"
+      },
+      {
+        "embeddable": true,
+        "href": "https://admin.mundi.chelpis.com/wp-json/wp/v2/tags?post=100",
+        "taxonomy": "post_tag"
+      }
+    ]
+  },
+  "acf": {
+    "check_points": "報到,APP報到禮,全程參加禮,簽退",
+    "date": "1520672400",
+    "end_date": "1520704800",
+    "image": {
+      "alt": "",
+      "caption": "",
+      "description": "",
+      "height": 1755,
+      "id": 272,
+      "mime_type": "image/jpeg",
+      "sizes": {
+        "large": "https://ddme6kdet2xyc.cloudfront.net/wp-content/uploads/2018/02/02150359/2018-03-02_07-03-59_244463.jpg",
+        "large-height": 1755,
+        "large-width": 1241,
+        "medium": "https://ddme6kdet2xyc.cloudfront.net/wp-content/uploads/2018/02/02150359/2018-03-02_07-03-59_244463.jpg",
+        "medium-height": 1755,
+        "medium-width": 1241,
+        "medium_large": "https://ddme6kdet2xyc.cloudfront.net/wp-content/uploads/2018/02/02150359/2018-03-02_07-03-59_244463-768x1086.jpg",
+        "medium_large-height": 742,
+        "medium_large-width": 525,
+        "thumbnail": "https://ddme6kdet2xyc.cloudfront.net/wp-content/uploads/2018/02/02150359/2018-03-02_07-03-59_244463.jpg",
+        "thumbnail-height": 96,
+        "thumbnail-width": 68,
+        "twentyseventeen-featured-image": "https://ddme6kdet2xyc.cloudfront.net/wp-content/uploads/2018/02/02150359/2018-03-02_07-03-59_244463-1241x1200.jpg",
+        "twentyseventeen-featured-image-height": 1200,
+        "twentyseventeen-featured-image-width": 1241,
+        "twentyseventeen-thumbnail-avatar": "https://ddme6kdet2xyc.cloudfront.net/wp-content/uploads/2018/02/02150359/2018-03-02_07-03-59_244463-100x100.jpg",
+        "twentyseventeen-thumbnail-avatar-height": 100,
+        "twentyseventeen-thumbnail-avatar-width": 100
+      },
+      "title": "2018-03-02-07-03-59-243464",
+      "url": "https://ddme6kdet2xyc.cloudfront.net/wp-content/uploads/2018/02/02150359/2018-03-02_07-03-59_244463.jpg",
+      "width": 1241
+    },
+    "location": {
+      "address": "台灣台中市北區中國醫藥大學",
+      "lat": "24.1565204",
+      "lng": "120.68145630000003"
+    }
+  },
+  "author": "中華民國乳癌教育暨防治學會",
+  "avatar": "https://ddme6kdet2xyc.cloudfront.net/wp-content/uploads/2018/02/14143306/Official-avatar-11-100x100.png",
+  "categories": [
+    "event"
+  ],
+  "comment_status": "open",
+  "content": {
+    "protected": false,
+    "rendered": "\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e主辦單位：\u003c/strong\u003e\n\u003cul\u003e\n\u003cli\u003e中華民國乳癌教育暨防治學會\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e協辦單位：\u003c/strong\u003e\n\u003cul\u003e\n\u003cli\u003e中國醫藥大學附設醫院外科部\u003c/li\u003e\n\u003cli\u003e中國醫藥大學附設醫院乳房醫學中心\u003c/li\u003e\n\u003cli\u003e台灣萌蒂藥品有限公司\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e地點 : \u003c/strong\u003e\n\u003cul\u003e\n\u003cli\u003e中國醫藥大學立夫大樓B1國際會議廳\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e學分申請：\u003c/strong\u003e\n\u003col\u003e\n\u003cli\u003e台灣乳房醫學會\u003c/li\u003e\n\u003cli\u003e台灣外科醫學會\u003c/li\u003e\n\u003cli\u003e台灣專科護理師學會(護理人員繼續教育積分,專科護理師繼續教育積分)\u003c/li\u003e\n\u003cli\u003e台灣癌症安寧緩和醫學會\u003c/li\u003e\n\u003cli\u003e台灣腫瘤護理學會\u003c/li\u003e\n\u003cli\u003e台灣臨床藥學會\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e國外講者\u003c/strong\u003e：\n\u003col\u003e\n\u003cli\u003e樊碧發 教授(北京中日友好醫院)\u003c/li\u003e\n\u003cli\u003eDr. Tony O\u0026#8217;Brien(愛爾蘭 Marymount University Hospital)\u003c/li\u003e\n\u003cli\u003e陸宇晗 護理部主任(北京大學腫瘤醫院)\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n"
+  },
+  "date": "2018-02-08T09:36:04",
+  "date_gmt": "2018-02-08T01:36:04",
+  "excerpt": {
+    "protected": false,
+    "rendered": "\u003cp\u003e主辦單位： 中華民國乳癌教育暨防治學會 協辦單位： 中國醫藥大學附設醫院外科部 中國醫藥大學附設醫院乳房醫學中 \u0026hellip; \u003c/p\u003e\n\u003cp class=\"link-more\"\u003e\u003ca href=\"https://admin.mundi.chelpis.com/archives/100\" class=\"more-link\"\u003e繼續閱讀\u003cspan class=\"screen-reader-text\"\u003e \u0026#8220;2018 癌症照護: 翻轉護理接軌國際\u0026#8221;\u003c/span\u003e\u003c/a\u003e\u003c/p\u003e\n"
+  },
+  "featured_media": 0,
+  "format": "standard",
+  "guid": "wordpress100",
+  "id": 100,
+  "isCollected": true,
+  "isLike": false,
+  "link": "https://admin.mundi.chelpis.com/archives/100",
+  "meta": [],
+  "modified": "2018-03-02T16:29:18",
+  "modified_gmt": "2018-03-02T08:29:18",
+  "ping_status": "open",
+  "slug": "2018-%e7%99%8c%e7%97%87%e7%85%a7%e8%ad%b7-%e7%bf%bb%e8%bd%89%e8%ad%b7%e7%90%86%e6%8e%a5%e8%bb%8c%e5%9c%8b%e9%9a%9b-2",
+  "status": "publish",
+  "sticky": false,
+  "tags": [],
+  "template": "",
+  "title": {
+    "rendered": "2018 癌症照護: 翻轉護理接軌國際"
+  },
+  "type": "post"
+}

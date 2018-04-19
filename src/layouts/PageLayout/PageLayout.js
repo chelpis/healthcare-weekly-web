@@ -8,13 +8,23 @@ import Toolbar from 'material-ui/Toolbar'
 import Typography from 'material-ui/Typography'
 
 const styles = theme => ({
+  Toolbar: {
+    maxWidth: 840,
+    width: '100%',
+    margin: '0 auto',
+  },
   content: {
     position: 'absolute',
     flexGrow: 1,
     paddingTop: 64,
     paddingLeft: 20,
     paddingRight: 20,
+    width: '100%'
   },
+  main: {
+    maxWidth: 740,
+    margin: '0 auto',
+  }
 })
 
 class PageLayout extends React.Component {
@@ -31,13 +41,18 @@ class PageLayout extends React.Component {
     return (
       <div className={classes.content}>
         <AppBar>
-          <Toolbar>
+          <Toolbar classes={{
+            root: classes.Toolbar
+          }}
+          >
             <Typography variant='title' color='inherit'>
               Healthcare Weekly
             </Typography>
           </Toolbar>
         </AppBar>
-        {children}
+        <div className={classes.main}>
+          {children}
+        </div>
       </div>
     )
   }

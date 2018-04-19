@@ -1,14 +1,18 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import moment from 'moment'
 import { withStyles } from 'material-ui/styles'
-
 import Typography from 'material-ui/Typography'
-import Avatar from 'material-ui/Avatar'
-import Grid from 'material-ui/Grid'
 import Divider from 'material-ui/Divider'
+import {
+  Link
+} from 'react-router'
+
+import AuthorAvatar from 'app/components/AuthorAvatar'
 
 const styles = theme => ({
+  link: {
+    textDecoration: 'none'
+  },
   container: {
     paddingTop: 20,
     paddingBottom: 20,
@@ -20,6 +24,7 @@ const styles = theme => ({
     height: 300,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    marginBottom: 10,
   },
   Divider: {
     marginTop: 20,
@@ -28,7 +33,7 @@ const styles = theme => ({
 
 class PostListItem extends Component {
   static propTypes = {
-    // id: PropTypes.string,
+    id: PropTypes.string,
     title: PropTypes.string,
     content: PropTypes.string,
     author: PropTypes.object,
@@ -39,6 +44,7 @@ class PostListItem extends Component {
 
   render () {
     const {
+      id,
       title,
       content,
       author,
@@ -47,50 +53,43 @@ class PostListItem extends Component {
       classes
     } = this.props
     return (
-      <div className={classes.container}>
-        <Typography
-          variant='title'
-          gutterBottom
-        >
-          {title}
-        </Typography>
-        <Typography gutterBottom>
-          {content}
-        </Typography>
+      <Link
+        className={classes.link}
+        to={`/posts/${id}`}
+      >
+        <div className={classes.container}>
+          <Typography
+            variant='title'
+            gutterBottom
+          >
+            {title}
+          </Typography>
+          <Typography gutterBottom>
+            {content}
+          </Typography>
 
-        {
-          extensionsChelpisCms.image && (
-            <div
-              style={{
-                backgroundImage: `url(${extensionsChelpisCms.image[0].value})`
-              }}
-              className={classes.image}
-            />
-          )
-        }
-
-        <Grid container>
-          <Grid item>
-            <Avatar
-              alt={author.name}
-              src={author.avatarUrl}
-            />
-          </Grid>
-          <Grid item>
-            <Typography>
-              {author.name}
-            </Typography>
-            <Typography>
-              {moment(date).fromNow()}
-            </Typography>
-          </Grid>
-        </Grid>
-        <Divider
-          classes={{
-            root: classes.Divider
-          }}
-        />
-      </div>
+          {
+            extensionsChelpisCms.image && (
+              <div
+                style={{
+                  backgroundImage: `url(${extensionsChelpisCms.image[0].value})`
+                }}
+                className={classes.image}
+              />
+            )
+          }
+          <AuthorAvatar
+            name={author.name}
+            avatarSrc={author.avatarUrl}
+            date={date}
+          />
+          <Divider
+            classes={{
+              root: classes.Divider
+            }}
+          />
+        </div>
+      </Link>
     )
   }
 }

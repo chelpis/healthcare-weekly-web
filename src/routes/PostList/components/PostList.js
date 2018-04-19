@@ -11,7 +11,7 @@ export default class Posts extends Component {
     isEnd: PropTypes.bool,
     next: PropTypes.string,
     errorMessage: PropTypes.string,
-    fetchedTimestamp: PropTypes.string,
+    fetchedTimestamp: PropTypes.number,
     fetchPosts: PropTypes.func,
   }
 
