@@ -6,6 +6,7 @@ import Typography from 'material-ui/Typography'
 import Parser from 'html-react-parser'
 
 import AuthorAvatar from '../../../components/AuthorAvatar'
+import HelmetShare from './HelmetShare'
 
 const styles = theme => ({
   container: {
@@ -30,17 +31,16 @@ const styles = theme => ({
 class PostDetail extends Component {
   static propTypes = {
     fetchPost: PropTypes.func,
-    id: PropTypes.string,
-    isLoading: PropTypes.bool,
+    // isLoading: PropTypes.bool,
     title: PropTypes.string,
     content: PropTypes.string,
     author: PropTypes.object,
     date: PropTypes.string,
     acf: PropTypes.object,
-    categories: PropTypes.array,
-    isEventLoading: PropTypes.bool,
+    // categories: PropTypes.array,
+    // isEventLoading: PropTypes.bool,
     errorMessage: PropTypes.string,
-    attendees: PropTypes.array,
+    // attendees: PropTypes.array,
     params: PropTypes.object,
     classes: PropTypes.object,
   }
@@ -76,16 +76,17 @@ class PostDetail extends Component {
 
   render () {
     const {
-      id,
+      // id,
       title,
       content,
       author,
       date,
       acf,
-      categories,
+      // categories,
       classes,
       errorMessage
     } = this.props
+    const hasImage = !!(acf && acf.image)
     return errorMessage ? (
       <div className={classes.container}>
         <Typography>
@@ -94,6 +95,12 @@ class PostDetail extends Component {
       </div>
     ) : (
       <div className={classes.container}>
+        <HelmetShare
+          title={title}
+          author={author.name}
+          content={content}
+          cover={hasImage ? acf.image.sizes.medium : ''}
+        />
         <Typography
           variant='title'
           classes={{
@@ -110,8 +117,6 @@ class PostDetail extends Component {
             root: classes.AuthorAvatar
           }}
         />
-
-        <br />
         {
           acf.image && (
             <div className={classes.imageWrapper}>

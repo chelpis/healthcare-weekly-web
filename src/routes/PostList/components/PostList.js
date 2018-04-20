@@ -14,12 +14,12 @@ const styles = theme => ({
 class PostList extends Component {
   static propTypes = {
     posts: PropTypes.array,
-    isRefreshing: PropTypes.bool,
-    isLoading: PropTypes.bool,
-    isEnd: PropTypes.bool,
-    next: PropTypes.string,
+    // isRefreshing: PropTypes.bool,
+    // isLoading: PropTypes.bool,
+    // isEnd: PropTypes.bool,
+    // next: PropTypes.string,
     errorMessage: PropTypes.string,
-    fetchedTimestamp: PropTypes.number,
+    // fetchedTimestamp: PropTypes.number,
     fetchPosts: PropTypes.func,
     classes: PropTypes.object,
   }
