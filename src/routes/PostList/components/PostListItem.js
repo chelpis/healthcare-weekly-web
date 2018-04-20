@@ -14,10 +14,15 @@ const styles = theme => ({
     textDecoration: 'none'
   },
   container: {
-    paddingTop: 20,
-    paddingBottom: 20,
+    paddingTop: 14,
     paddingLeft: 24,
     paddingRight: 24,
+  },
+  title: {
+    marginBottom: 10
+  },
+  content: {
+    marginBottom: 10,
   },
   image: {
     width: '100%',
@@ -60,11 +65,17 @@ class PostListItem extends Component {
         <div className={classes.container}>
           <Typography
             variant='title'
-            gutterBottom
+            classes={{
+              root: classes.title
+            }}
           >
             {title}
           </Typography>
-          <Typography gutterBottom>
+          <Typography
+            classes={{
+              root: classes.content
+            }}
+          >
             {content}
           </Typography>
 

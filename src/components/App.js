@@ -4,7 +4,9 @@ import { Provider } from 'react-redux'
 import PropTypes from 'prop-types'
 import { MuiThemeProvider } from 'material-ui/styles'
 import 'moment/locale/zh-tw'
+
 import theme from 'app/constants/theme'
+import { logPageView } from 'app/utils/googleAnalytics'
 
 class App extends React.Component {
   static propTypes = {
@@ -20,7 +22,11 @@ class App extends React.Component {
     return (
       <Provider store={this.props.store}>
         <MuiThemeProvider theme={theme}>
-          <Router history={browserHistory} children={this.props.routes} />
+          <Router
+            history={browserHistory}
+            children={this.props.routes}
+            onUpdate={logPageView}
+          />
         </MuiThemeProvider>
       </Provider>
     )

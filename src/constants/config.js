@@ -9,3 +9,4 @@ export const RELAY_SERVERS = [
   }
 ]
 export const DECIMAL_DIGITS = 10
+export const GOOGLE_TRACKING_ID = 'UA-109179549-4'

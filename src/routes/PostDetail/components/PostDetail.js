@@ -1,18 +1,30 @@
 import React, { Component } from 'react'
-
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui'
 import ImageZoom from 'react-medium-image-zoom'
+import Typography from 'material-ui/Typography'
+import Parser from 'html-react-parser'
 
 import AuthorAvatar from '../../../components/AuthorAvatar'
 
 const styles = theme => ({
+  container: {
+    paddingTop: 20,
+    paddingBottom: 20,
+  },
+  title: {
+    fontSize: 25,
+    marginBottom: 20,
+  },
   imageWrapper: {
     textAlign: 'center'
   },
   image: {
     // width: '100%'
     height: 400,
+  },
+  AuthorAvatar: {
+    marginBottom: 25,
   }
 })
 
@@ -44,6 +56,25 @@ class PostDetail extends Component {
     fetchPost(id)
   }
 
+  parseHtml = (content, classes) => (
+    Parser(content, {
+      replace: (domNode) => {
+        if (domNode.name === 'img') {
+          return (
+            <div className={classes.imageWrapper}>
+              <ImageZoom
+                image={{
+                  src: domNode.attribs.src,
+                  className: classes.image
+                }}
+              />
+            </div>
+          )
+        }
+      }
+    })
+  )
+
   render () {
     const {
       id,
@@ -56,12 +87,22 @@ class PostDetail extends Component {
       classes
     } = this.props
     return (
-      <div>
-        <h1>{title}</h1>
+      <div className={classes.container}>
+        <Typography
+          variant='title'
+          classes={{
+            root: classes.title
+          }}
+        >
+          {title}
+        </Typography>
         <AuthorAvatar
           name={author.name}
           avatarSrc={author.avatarUrl}
           date={date}
+          classes={{
+            root: classes.AuthorAvatar
+          }}
         />
 
         <br />
@@ -80,11 +121,9 @@ class PostDetail extends Component {
             </div>
           )
         }
-        <div
-          dangerouslySetInnerHTML={{
-            __html: content
-          }}
-        />
+        <div>
+          {this.parseHtml(content, classes)}
+        </div>
       </div>
     )
   }
