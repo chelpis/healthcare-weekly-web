@@ -4,9 +4,13 @@ import { Provider } from 'react-redux'
 import PropTypes from 'prop-types'
 import { MuiThemeProvider } from 'material-ui/styles'
 import 'moment/locale/zh-tw'
+import axios from 'axios'
 
+import { SERVER_URL } from 'app/constants/config'
 import theme from 'app/constants/theme'
 import { logPageView } from 'app/utils/googleAnalytics'
+axios.defaults.baseURL = SERVER_URL
+axios.defaults.withCredentials = true
 
 class App extends React.Component {
   static propTypes = {

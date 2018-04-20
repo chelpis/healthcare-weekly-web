@@ -1,9 +1,17 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import Typography from 'material-ui/Typography'
+import { withStyles } from 'material-ui'
 
 import PostListItem from './PostListItem'
 
-export default class Posts extends Component {
+const styles = theme => ({
+  container: {
+    paddingTop: 20,
+  }
+})
+
+class PostList extends Component {
   static propTypes = {
     posts: PropTypes.array,
     isRefreshing: PropTypes.bool,
@@ -13,6 +21,7 @@ export default class Posts extends Component {
     errorMessage: PropTypes.string,
     fetchedTimestamp: PropTypes.number,
     fetchPosts: PropTypes.func,
+    classes: PropTypes.object,
   }
 
   componentDidMount = () => {
@@ -24,10 +33,18 @@ export default class Posts extends Component {
 
   render () {
     const {
-      posts
+      posts,
+      errorMessage,
+      classes
     } = this.props
-    return (
-      <div>
+    return errorMessage ? (
+      <div className={classes.container}>
+        <Typography>
+          {errorMessage}
+        </Typography>
+      </div>
+    ) : (
+      <div className={classes.container}>
         {
           posts.map(item => (
             <PostListItem
@@ -40,3 +57,5 @@ export default class Posts extends Component {
     )
   }
 }
+
+export default withStyles(styles)(PostList)

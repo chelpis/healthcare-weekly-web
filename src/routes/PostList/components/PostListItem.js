@@ -32,7 +32,7 @@ const styles = theme => ({
     marginBottom: 10,
   },
   Divider: {
-    marginTop: 20,
+    marginTop: 17,
   }
 })
 

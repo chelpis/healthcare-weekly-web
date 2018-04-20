@@ -58,9 +58,9 @@ export const fetchPost = (id) => async (dispatch, getState) => {
         isCollected: data.isCollected,
       }
     })
-    if (data.categories.includes('event')) {
-      await fetchEvent(id)(dispatch)
-    }
+    // if (data.categories.includes('event')) {
+    //   await fetchEvent(id)(dispatch)
+    // }
   } catch (error) {
     console.log(error)
     dispatch({

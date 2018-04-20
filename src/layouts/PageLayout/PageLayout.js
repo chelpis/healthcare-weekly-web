@@ -17,8 +17,6 @@ const styles = theme => ({
     position: 'absolute',
     flexGrow: 1,
     paddingTop: 64,
-    paddingLeft: 20,
-    paddingRight: 20,
     width: '100%'
   },
   main: {

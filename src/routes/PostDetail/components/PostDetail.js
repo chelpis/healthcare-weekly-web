@@ -9,8 +9,7 @@ import AuthorAvatar from '../../../components/AuthorAvatar'
 
 const styles = theme => ({
   container: {
-    paddingTop: 20,
-    paddingBottom: 20,
+    padding: 20,
   },
   title: {
     fontSize: 25,
@@ -84,9 +83,16 @@ class PostDetail extends Component {
       date,
       acf,
       categories,
-      classes
+      classes,
+      errorMessage
     } = this.props
-    return (
+    return errorMessage ? (
+      <div className={classes.container}>
+        <Typography>
+          {errorMessage}
+        </Typography>
+      </div>
+    ) : (
       <div className={classes.container}>
         <Typography
           variant='title'
