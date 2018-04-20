@@ -4,6 +4,10 @@ import { GOOGLE_TRACKING_ID } from 'app/constants/config'
 
 ReactGA.initialize(GOOGLE_TRACKING_ID)
 
+ReactGA.set({
+  dimension1: navigator.userAgent
+})
+
 export function logPageView () {
   ReactGA.set({ page: window.location.pathname + window.location.search })
   ReactGA.pageview(window.location.pathname + window.location.search)
