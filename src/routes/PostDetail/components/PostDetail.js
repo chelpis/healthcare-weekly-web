@@ -4,6 +4,12 @@ import { withStyles } from 'material-ui'
 import ImageZoom from 'react-medium-image-zoom'
 import Typography from 'material-ui/Typography'
 import Parser from 'html-react-parser'
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  FacebookIcon,
+  TwitterIcon,
+} from 'react-share'
 
 import AuthorAvatar from '../../../components/AuthorAvatar'
 import HelmetShare from './HelmetShare'
@@ -25,6 +31,13 @@ const styles = theme => ({
   },
   AuthorAvatar: {
     marginBottom: 25,
+  },
+  shareButtons: {
+    textAlign: 'right'
+  },
+  shareButton: {
+    display: 'inline-block',
+    marginRight: 10,
   }
 })
 
@@ -87,6 +100,7 @@ class PostDetail extends Component {
       errorMessage
     } = this.props
     const hasImage = !!(acf && acf.image)
+    const shareUrl = location.href
     return errorMessage ? (
       <div className={classes.container}>
         <Typography>
@@ -134,6 +148,27 @@ class PostDetail extends Component {
         }
         <div>
           {this.parseHtml(content, classes)}
+        </div>
+        <hr />
+        <div className={classes.shareButtons}>
+          <FacebookShareButton
+            className={classes.shareButton}
+            url={shareUrl}
+          >
+            <FacebookIcon
+              size={32}
+              round
+            />
+          </FacebookShareButton>
+          <TwitterShareButton
+            className={classes.shareButton}
+            url={shareUrl}
+          >
+            <TwitterIcon
+              size={32}
+              round
+            />
+          </TwitterShareButton>
         </div>
       </div>
     )
