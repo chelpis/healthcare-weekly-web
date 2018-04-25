@@ -13,14 +13,10 @@ export const FETCH_POSTS_FAILURE = 'FETCH_POSTS_FAILURE'
 // Actions
 // ------------------------------------
 
-export const fetchPosts = (url = '') => async (dispatch, getState) => {
+export const fetchPosts = ({ page = 0 } = {}) => async (dispatch, getState) => {
   try {
-    const isRefreshing = url === ''
     dispatch({
       type: FETCH_POSTS_REQUEST,
-      payload: {
-        isRefreshing
-      }
     })
     // const response = await axios.get(url || '/posts?page[number]=0')
     const response = {
@@ -28,7 +24,6 @@ export const fetchPosts = (url = '') => async (dispatch, getState) => {
     }
     const {
       links: {
-        self,
         next,
       }
     } = response.data
@@ -37,11 +32,9 @@ export const fetchPosts = (url = '') => async (dispatch, getState) => {
     dispatch({
       type: FETCH_POSTS_SUCCESS,
       payload: {
-        isRefreshing,
-        isEnd: self === next || data.length === 0,
         next,
         data,
-        fetchedTimestamp: (new Date()).getTime()
+        page,
       }
     })
   } catch (error) {
@@ -59,24 +52,19 @@ export const fetchPosts = (url = '') => async (dispatch, getState) => {
 const ACTION_HANDLERS = {
   [FETCH_POSTS_REQUEST]: (state, action) => ({
     ...state,
-    isRefreshing: action.payload.isRefreshing,
     isLoading: true,
     errorMessage: '',
-    posts: action.payload.isRefreshing ? [] : [...state.posts]
   }),
   [FETCH_POSTS_SUCCESS]: (state, action) => ({
     ...state,
-    isRefreshing: false,
     isLoading: false,
-    posts: action.payload.isRefreshing ? action.payload.data : [...state.posts, ...action.payload.data],
-    isEnd: action.payload.isEnd,
     next: action.payload.next,
-    fetchedTimestamp: action.payload.fetchedTimestamp,
+    page: action.payload.page,
+    posts: action.payload.data,
     errorMessage: '',
   }),
   [FETCH_POSTS_FAILURE]: (state, action) => ({
     ...state,
-    isRefreshing: false,
     isLoading: false,
     isEnd: false,
     errorMessage: action.payload
@@ -87,13 +75,11 @@ const ACTION_HANDLERS = {
 // Reducer
 // ------------------------------------
 const initialState = {
-  isRefreshing: false,
+  page: 0,
   isLoading: false,
   posts: [],
-  isEnd: false,
   errorMessage: '',
   next: '',
-  fetchedTimestamp: 0,
 }
 
 export default function reducer (state = initialState, action) {

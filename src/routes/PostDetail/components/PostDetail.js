@@ -33,7 +33,9 @@ const styles = theme => ({
     marginBottom: 25,
   },
   shareButtons: {
-    textAlign: 'right'
+    textAlign: 'right',
+    paddingTop: 10,
+    paddingBottom: 10,
   },
   shareButton: {
     display: 'inline-block',

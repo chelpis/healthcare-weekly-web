@@ -11,21 +11,17 @@ const mapDispatchToProps = {
 const mapStateToProps = (state) => {
   const {
     posts,
-    isRefreshing,
     isLoading,
-    isEnd,
     next,
+    page,
     errorMessage,
-    fetchedTimestamp,
   } = state.postList
   return {
     posts,
-    isRefreshing,
     isLoading,
-    isEnd,
     next,
+    page,
     errorMessage,
-    fetchedTimestamp,
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(PostList)

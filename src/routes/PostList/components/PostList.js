@@ -2,8 +2,12 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Typography from 'material-ui/Typography'
 import { withStyles } from 'material-ui'
+import ReactPaginate from 'react-paginate'
 
 import PostListItem from './PostListItem'
+
+import './PostList.scss'
+import { PAGE_COUNT } from '../../../constants/config'
 
 const styles = theme => ({
   container: {
@@ -13,28 +17,37 @@ const styles = theme => ({
 
 class PostList extends Component {
   static propTypes = {
+    page: PropTypes.number,
     posts: PropTypes.array,
-    // isRefreshing: PropTypes.bool,
-    // isLoading: PropTypes.bool,
-    // isEnd: PropTypes.bool,
-    // next: PropTypes.string,
     errorMessage: PropTypes.string,
-    // fetchedTimestamp: PropTypes.number,
     fetchPosts: PropTypes.func,
+    router: PropTypes.object,
+    location: PropTypes.object,
     classes: PropTypes.object,
   }
 
   componentDidMount = () => {
     const {
+      location: {
+        query
+      },
       fetchPosts
     } = this.props
-    fetchPosts()
+    fetchPosts({ page: parseInt(query.page - 1) })
+  }
+
+  onPageChange = ({ selected }) => {
+    const {
+      router
+    } = this.props
+    router.push(`?page=${selected + 1}`)
   }
 
   render () {
     const {
       posts,
       errorMessage,
+      page,
       classes
     } = this.props
     return errorMessage ? (
@@ -53,6 +66,21 @@ class PostList extends Component {
             />
           ))
         }
+
+        <ReactPaginate
+          forcePage={page}
+          previousLabel={'<'}
+          nextLabel={'>'}
+          breakLabel={<a href='#'>...</a>}
+          pageCount={PAGE_COUNT}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={5}
+          onPageChange={this.onPageChange}
+          containerClassName={'pagination'}
+          breakClassName={'break'}
+          subContainerClassName={'pages pagination'}
+          activeClassName={'active'}
+        />
       </div>
     )
   }
