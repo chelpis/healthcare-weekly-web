@@ -34,7 +34,7 @@ class PostList extends Component {
       },
       fetchPosts
     } = this.props
-    fetchPosts({ page: parseInt(query.page - 1) })
+    fetchPosts({ page: parseInt(query.page - 1) || 0 })
   }
 
   onPageChange = ({ selected }) => {
