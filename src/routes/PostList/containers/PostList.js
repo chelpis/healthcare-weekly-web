@@ -14,6 +14,7 @@ const mapStateToProps = (state) => {
     isLoading,
     next,
     page,
+    totalItemCount,
     errorMessage,
   } = state.postList
   return {
@@ -21,6 +22,7 @@ const mapStateToProps = (state) => {
     isLoading,
     next,
     page,
+    totalItemCount,
     errorMessage,
   }
 }

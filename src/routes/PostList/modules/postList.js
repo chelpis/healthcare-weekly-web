@@ -1,4 +1,4 @@
-// import axios from 'axios'
+import axios from 'axios'
 import parsePost from './parsePost'
 
 // ------------------------------------
@@ -13,15 +13,13 @@ export const FETCH_POSTS_FAILURE = 'FETCH_POSTS_FAILURE'
 // Actions
 // ------------------------------------
 
-export const fetchPosts = ({ page = 0 } = {}) => async (dispatch, getState) => {
+export const fetchPosts = ({ url, page = 0 } = {}) => async (dispatch, getState) => {
   try {
     dispatch({
       type: FETCH_POSTS_REQUEST,
     })
-    // const response = await axios.get(url || '/posts?page[number]=0')
-    const response = {
-      data: require('./mockPosts.json')
-    }
+    const response = await axios.get(url || `/posts?page[number]=${page}`)
+    const totalItemCount = parseInt(response.headers['x-total'])
     const {
       links: {
         next,
@@ -35,6 +33,7 @@ export const fetchPosts = ({ page = 0 } = {}) => async (dispatch, getState) => {
         next,
         data,
         page,
+        totalItemCount,
       }
     })
   } catch (error) {
@@ -61,6 +60,7 @@ const ACTION_HANDLERS = {
     next: action.payload.next,
     page: action.payload.page,
     posts: action.payload.data,
+    totalItemCount: action.payload.totalItemCount,
     errorMessage: '',
   }),
   [FETCH_POSTS_FAILURE]: (state, action) => ({
@@ -77,6 +77,7 @@ const ACTION_HANDLERS = {
 const initialState = {
   page: 0,
   isLoading: false,
+  totalItemCount: 0,
   posts: [],
   errorMessage: '',
   next: '',

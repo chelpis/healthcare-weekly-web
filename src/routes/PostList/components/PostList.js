@@ -7,7 +7,7 @@ import ReactPaginate from 'react-paginate'
 import PostListItem from './PostListItem'
 
 import './PostList.scss'
-import { PAGE_COUNT } from '../../../constants/config'
+import { ITEMS_PER_PAGE } from '../../../constants/config'
 
 const styles = theme => ({
   container: {
@@ -23,6 +23,7 @@ class PostList extends Component {
     fetchPosts: PropTypes.func,
     router: PropTypes.object,
     location: PropTypes.object,
+    totalItemCount: PropTypes.number,
     classes: PropTypes.object,
   }
 
@@ -38,9 +39,11 @@ class PostList extends Component {
 
   onPageChange = ({ selected }) => {
     const {
-      router
+      router,
+      fetchPosts
     } = this.props
     router.push(`?page=${selected + 1}`)
+    fetchPosts({ page: parseInt(selected) })
   }
 
   render () {
@@ -48,6 +51,7 @@ class PostList extends Component {
       posts,
       errorMessage,
       page,
+      totalItemCount,
       classes
     } = this.props
     return errorMessage ? (
@@ -72,7 +76,7 @@ class PostList extends Component {
           previousLabel={'<'}
           nextLabel={'>'}
           breakLabel={<a href='#'>...</a>}
-          pageCount={PAGE_COUNT}
+          pageCount={Math.ceil(totalItemCount / ITEMS_PER_PAGE)}
           marginPagesDisplayed={2}
           pageRangeDisplayed={5}
           onPageChange={this.onPageChange}

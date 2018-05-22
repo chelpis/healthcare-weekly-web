@@ -13,7 +13,7 @@ export * from './constants'
 // Actions
 // ------------------------------------
 
-const parseAcf = (dataAcf) => {
+const parseAcf = (dataAcf = {}) => {
   const {
     date,
     end_date,
@@ -40,19 +40,20 @@ export const fetchPost = (id) => async (dispatch, getState) => {
     type: FETCH_POST_REQUEST,
   })
   try {
-    // const { data } = await axios.get(`/posts/${id}`)
-    const data = require('./mockPost.json')
+    const { data } = await axios.get(`/posts/${id}`)
+
     dispatch({
       type: FETCH_POST_SUCCESS,
       payload: {
         id,
         acf: parseAcf(data.acf),
+        image: data.extensions['chelpis-cms'].image[0].value,
         author: {
-          name: data.author,
-          avatarUrl: data.avatar
+          name: data.author.name,
+          avatarUrl: data.extensions['chelpis-cms'].avatar[0].value,
         },
         categories: data.categories,
-        content: data.content.rendered,
+        content: data.extensions['chelpis-cms'].content[0].value,
         date: data.date,
         title: data.title.rendered,
         isCollected: data.isCollected,
@@ -115,6 +116,7 @@ const ACTION_HANDLERS = {
       id,
       title,
       content,
+      image,
       acf,
       date,
       author,
@@ -127,6 +129,7 @@ const ACTION_HANDLERS = {
       id,
       title,
       content,
+      image,
       acf,
       date,
       author,
@@ -174,6 +177,7 @@ const initialState = {
     name: '',
     avatarUrl: null,
   },
+  image: null,
   acf: {
   },
   categories: [],

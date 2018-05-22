@@ -23,10 +23,10 @@ const styles = theme => ({
     marginBottom: 20,
   },
   imageWrapper: {
-    textAlign: 'center'
+    textAlign: 'center',
+    height: 400,
   },
   image: {
-    // width: '100%'
     height: 400,
   },
   AuthorAvatar: {
@@ -51,7 +51,8 @@ class PostDetail extends Component {
     content: PropTypes.string,
     author: PropTypes.object,
     date: PropTypes.string,
-    acf: PropTypes.object,
+    image: PropTypes.string,
+    // acf: PropTypes.object,
     // categories: PropTypes.array,
     // isEventLoading: PropTypes.bool,
     errorMessage: PropTypes.string,
@@ -96,12 +97,13 @@ class PostDetail extends Component {
       content,
       author,
       date,
-      acf,
+      image,
+      // acf,
       // categories,
       classes,
       errorMessage
     } = this.props
-    const hasImage = !!(acf && acf.image)
+    const hasImage = !!image
     const shareUrl = location.href
     return errorMessage ? (
       <div className={classes.container}>
@@ -115,7 +117,7 @@ class PostDetail extends Component {
           title={title}
           author={author.name}
           content={content}
-          cover={hasImage ? acf.image.sizes.medium : ''}
+          cover={hasImage ? image : ''}
         />
         <Typography
           variant='title'
@@ -134,15 +136,12 @@ class PostDetail extends Component {
           }}
         />
         {
-          acf.image && (
+          hasImage && (
             <div className={classes.imageWrapper}>
               <ImageZoom
                 image={{
-                  src: acf.image.sizes.medium,
+                  src: image,
                   className: classes.image
-                }}
-                zoomImage={{
-                  src: acf.image.sizes.large,
                 }}
               />
             </div>
