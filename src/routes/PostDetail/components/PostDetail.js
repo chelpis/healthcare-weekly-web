@@ -25,6 +25,7 @@ const styles = theme => ({
   imageWrapper: {
     textAlign: 'center',
     height: 400,
+    marginBottom: 10,
   },
   image: {
     height: 400,
@@ -40,6 +41,11 @@ const styles = theme => ({
   shareButton: {
     display: 'inline-block',
     marginRight: 10,
+  },
+  readMore: {
+    marginTop: 10,
+    display: 'block',
+    textAlign: 'right',
   }
 })
 
@@ -52,6 +58,8 @@ class PostDetail extends Component {
     author: PropTypes.object,
     date: PropTypes.string,
     image: PropTypes.string,
+    isDigest: PropTypes.bool,
+    link: PropTypes.string,
     // acf: PropTypes.object,
     // categories: PropTypes.array,
     // isEventLoading: PropTypes.bool,
@@ -98,6 +106,8 @@ class PostDetail extends Component {
       author,
       date,
       image,
+      isDigest,
+      link,
       // acf,
       // categories,
       classes,
@@ -150,6 +160,11 @@ class PostDetail extends Component {
         <div>
           {this.parseHtml(content, classes)}
         </div>
+        {
+          isDigest && (
+            <a className={classes.readMore} href={link}>繼續閱讀</a>
+          )
+        }
         <hr />
         <div className={classes.shareButtons}>
           <FacebookShareButton
