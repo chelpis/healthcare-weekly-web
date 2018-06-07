@@ -12,7 +12,7 @@
     "test:watch": "npm test -- --watch",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
-    "deploy": "surge -p ./dist -d chelpis-amulet-web.surge.sh"
+    "deploy": "surge -p ./dist -d healthcare-weekly.chelpis.com"
   },
   "repository": {
     "type": "git",
