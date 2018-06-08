@@ -24,11 +24,13 @@ const styles = theme => ({
   },
   imageWrapper: {
     textAlign: 'center',
-    height: 400,
+    height: 'auto',
     marginBottom: 10,
   },
   image: {
-    height: 400,
+    width: '100%',
+    maxWidth: 400,
+    height: 'auto'
   },
   AuthorAvatar: {
     marginBottom: 25,
