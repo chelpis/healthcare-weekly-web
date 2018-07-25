@@ -28,7 +28,7 @@ export default class HelmetShare extends PureComponent {
         <title>
           {siteTitle}
         </title>
-        <meta name='description' content='Page description. No longer than 155 characters.' />
+        <meta name='description' content={description} />
 
         {/* <!-- Twitter Card data --> */}
         {/* <meta name='twitter:card' content='summary' /> */}

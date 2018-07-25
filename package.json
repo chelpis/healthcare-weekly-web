@@ -1,7 +1,7 @@
 {
   "name": "healthcare-weekly-web",
   "version": "0.1.0",
-  "description": "Get started with React, Redux, and React-Router!",
+  "description": "Healthcare weekly",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
@@ -17,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/davezuko/react-redux-starter-kit.git"
   },
-  "author": "David Zukowski <david@zuko.me> (http://zuko.me)",
+  "author": "Steven fong<steven.fong@chelpis.com>",
   "license": "MIT",
   "dependencies": {
     "0x.js": "^0.33.6",
